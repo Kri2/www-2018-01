@@ -1,0 +1,23 @@
+{
+  "name": "www-2018-01",
+  "version": "1.0.0",
+  "description": "nie ma",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kri2/www-2018-01.git"
+  },
+  "author": "Krzysztof Turlej",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kri2/www-2018-01/issues"
+  },
+  "homepage": "https://github.com/kri2/www-2018-01#readme",
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "normalize.css": "^7.0.0"
+  }
+}
