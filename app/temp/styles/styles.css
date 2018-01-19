@@ -450,6 +450,8 @@ template {
   display: none;
 }
 
+/*automatically from node_modules no need for path, normalizes for all browsers, use in all projects*/
+
 body{
     font-family: 'Roboto', sans-serif;
     color: #333;
@@ -462,32 +464,65 @@ img{
 
 .large-hero {
     position: relative;
+    
 }
 
 .large-hero__text-content{
-    position:absolute;
-    /*aligning verticaly*/
-    /*w połowie od góry*/
-    top:50%;
-    /*połowę własnej wysokości do góry*/
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-    /*aligning verticaly end*/
-    left:0;
-    /*aligning horizontaly*/
-    width:100%;
-    text-align: center;
-    /*aligning horizontaly end*/
-}
+        position:absolute;
+        /*aligning verticaly*/
+        /*w połowie od góry*/
+        top:50%;
+        /*połowę własnej wysokości do góry*/
+        -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
+        /*aligning verticaly end*/
+        left:0;
+        /*aligning horizontaly*/
+        width:100%;
+        text-align: center;
+        /*aligning horizontaly end*/
+    }
 
 .large-hero__title{
-    font-weight:300;
-    color:#2f5572;
-    font-size:4.8rem;
-}
+        font-weight:300;
+        color:#2f5572;
+        font-size:4.8rem;
+        margin:0; /*to eliminate gap*/
+    }
 
 .large-hero__subtitle{
-    font-weight:300;
-    color:#2f5572;
-    font-size:2.9rem;
+        font-weight:300;
+        color:#2f5572;
+        font-size:2.9rem;
+        margin:0; /*to eliminate gap*/
+    }
+
+.large-hero__description{
+        color:#fff;
+        font-size:1.875rem;/*most browsers will have root (<html>) size 16px so 1.5rem is 24px */
+        font-weight:100;
+        text-shadow:2px 2px 0 rgba(0,0,0,0.1);
+        /*aby tekst był przedzielony jak chcemy*/
+        max-width:30rem;/*480px*//*zmierzone na ekranie, aby tekst był tak przedzielony jak jest, przeliczone na rem */
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+.btn{
+    background-color:#2f5572;
+    color:#fff;
+    text-decoration: none;
+    padding:0.75rem 1.2rem;
+    display:inline-block;
 }
+
+/*this way parrent and surrounding elements will be aware of its vertical padding*/
+
+.btn--orange{
+        background-color: #d59541;
+    }
+
+.btn--large{
+        font-size:1.25rem;
+        padding:1.1rem 1.9rem;
+    }
