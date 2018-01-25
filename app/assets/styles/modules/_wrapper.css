@@ -1,0 +1,21 @@
+.wrapper{
+    overflow:hidden;/*helps with negative margin used in right columns*/
+    padding-left:18px;
+    padding-right:18px;
+    max-width:1200px;
+    margin-left:auto;
+    margin-right:auto;
+    &--medium{
+        max-width:976px;
+    }
+    .wrapper{/*for any wrapper nested in this wrapper*/
+        padding-left:0;
+        padding-right:0;
+    }
+    &--b-margin{
+        margin-bottom:1rem;
+        @mixin atSmall{
+            margin-bottom:3.875rem;
+        }
+    }
+}

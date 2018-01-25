@@ -1,5 +1,9 @@
 .large-hero {
     position: relative;
+    border-bottom: 10px solid $mainBlue;
+    &__image{
+        display:block; /*there was a white gap to the border at the bottom that's why it's here, automatically img is inline which means it is treated as text, and it leaves gap between lines*/
+    }
     &__text-content{
         position:absolute;
         /*aligning verticaly*/
@@ -17,24 +21,43 @@
     &__title{
         font-weight:300;
         color:$mainBlue;
-        font-size:4.8rem;
+        font-size:2.4rem;/*Mobile first !*/
         margin:0; /*to eliminate gap*/
+        /* traditional way, but we will use mixins
+        @media (min-width:530px){
+            font-size:4.8rem;
+        }*/
+        @mixin atSmall{
+            font-size:4.8rem;
+        }
+        @mixin atMedium{
+            font-size:4.8rem;
+        }
+        @mixin atLarge{
+            font-size:4.8rem;
+        }
     }
     &__subtitle{
         font-weight:300;
         color:$mainBlue;
-        font-size:2.9rem;
+        font-size:1.5rem;
         margin:0; /*to eliminate gap*/
+        @mixin atSmall{
+            font-size:2.9rem;
+        }
     }    
     &__description{
         color:#fff;
-        font-size:1.875rem;/*most browsers will have root (<html>) size 16px so 1.5rem is 24px */
+        font-size:1.1rem;/*most browsers will have root (<html>) size 16px so 1.5rem is 24px */
         font-weight:100;
         text-shadow:2px 2px 0 rgba(0,0,0,0.1);
         /*aby tekst był przedzielony jak chcemy*/
         max-width:30rem;/*480px*//*zmierzone na ekranie, aby tekst był tak przedzielony jak jest, przeliczone na rem */
         margin-left:auto;
         margin-right:auto;
+        @mixin atSmall{
+            font-size:1.875rem;
+        }
     }
     
 }

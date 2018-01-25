@@ -6,3 +6,7 @@ img{
     max-width:100%;
     height:auto;
 }
+
+*{
+    box-sizing:border-box; /*thanks to that calculating percantages gets easier (margins are not counted)*/
+}

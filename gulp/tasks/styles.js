@@ -3,11 +3,16 @@ postcss = require('gulp-postcss'),
 autoprefixer = require('autoprefixer')
 cssvars = require('postcss-simple-vars'),
 nested = require('postcss-nested'),
-cssImport = require('postcss-import');
+cssImport = require('postcss-import'),
+mixins = require('postcss-mixins');
 
 gulp.task('styles',function(){
     console.log("Imagine Sass or PostCSS tasks running here.");
     return gulp.src("./app/assets/styles/styles.css")
-        .pipe(postcss([cssImport,cssvars,nested,autoprefixer]))
+        .pipe(postcss([cssImport,mixins,cssvars,nested,autoprefixer]))
+        .on('error', function(errorInfo){
+            console.log(errorInfo.toString());
+            this.emit('end'); //this way when error it will end but not exit and stop everything
+        })
         .pipe(gulp.dest('./app/temp/styles'));//return jest dlatego, ze src pipe jest asynchronious, node needs to know when it finishes
 });

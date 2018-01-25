@@ -1,5 +1,10 @@
 @import "normalize.css";/*automatically from node_modules no need for path, normalizes for all browsers, use in all projects*/
 @import "base/_global";
 @import "base/_variables";
+@import "base/_mixins";
 @import "modules/_large-hero";
 @import "modules/_btn";
+@import "modules/_wrapper";
+@import "modules/_page-section";
+@import "modules/_headline";
+@import "modules/_row";

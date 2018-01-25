@@ -1,0 +1,28 @@
+.row{
+    /* moved into the mixin
+    &::after{ /*proper/nice way to have "cleared floats" after element, ::after is added after all elements content
+        content:"";
+        clear: both;
+        display:table;/*this one for compatibility
+    }*/
+    @mixin clearfix;
+    &--gutters{
+        margin-right:-65px;/*to compensate right margin of the last collumn in --gutters, below*/
+    }
+    &--gutters > div{ /* > selects all children */
+        padding-right:65px;
+        box-sizing:border-box; /*this one makes browser calculate 33%/66% above without thouse paddings, could be used to all elements globally as well*/
+    }
+    
+    @mixin atMedium{
+        &__medium-4{
+            float:left;
+            width:33.33%;
+        }
+        &__medium-8{
+            float:left;
+            width:66.66%;
+        }
+    }
+    
+}
