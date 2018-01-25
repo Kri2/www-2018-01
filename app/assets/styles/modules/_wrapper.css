@@ -2,7 +2,7 @@
     overflow:hidden;/*helps with negative margin used in right columns*/
     padding-left:18px;
     padding-right:18px;
-    max-width:1200px;
+    max-width:1236px; /*to compensate padding-left/right caused by box-sizing:border-box and have full 1200px */
     margin-left:auto;
     margin-right:auto;
     &--medium{

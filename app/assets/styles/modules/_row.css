@@ -13,15 +13,27 @@
         padding-right:65px;
         box-sizing:border-box; /*this one makes browser calculate 33%/66% above without thouse paddings, could be used to all elements globally as well*/
     }
+    &__b-margin-until-medium{
+        margin-bottom:1rem;
+    }
     
     @mixin atMedium{
+        &__b-margin-until-medium{
+            margin-bottom:0rem;
+        }
         &__medium-4{
             float:left;
             width:33.33%;
         }
+        &__medium-4--larger{
+            width:37%;/*modifies above width to slightly correct width*/
+        }
         &__medium-8{
             float:left;
             width:66.66%;
+        }
+        &__medium-8--smaller{
+            width:63%;/*modifies above width to slightly correct width*/
         }
     }
     

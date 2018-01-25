@@ -10,3 +10,7 @@ img{
 *{
     box-sizing:border-box; /*thanks to that calculating percantages gets easier (margins are not counted)*/
 }
+
+a{
+    color:$mainOrange;
+}
